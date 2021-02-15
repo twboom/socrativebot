@@ -1,15 +1,19 @@
-const join = function join(roomName, firstName, lastName, tickSpeed) {
-    const timer = ms => new Promise(res => setTimeout(res, ms))
-    if (tickSpeed == undefined) {tickSpeed = 1}
+let join = [];
+
+join.run = function(room) {
+    join.room(room)
+}
+
+join.room = function join(roomName) {
     const roomInput = document.querySelector('#studentRoomName');
     const joinRoomButton = document.querySelector('#studentLoginButton');
-    async function fillRoomName() {
-        const roomNameLetters = roomName.split('');
-        roomInput.select()
-        for (i = 0; i < roomNameLetters.length; i++) {
-            roomInput.value += roomNameLetters[i]
-            await timer(1000)
-        }
-    };
-    setTimeout(fillRoomName, 1000)
+    roomInput.value = roomName;
+    roomInput.setAttribute('value', roomName)
+};
+
+join.name = function(firstName, lastName) {
+    const input = document.querySelector('#student-name-input');
+    const button = document.querySelector('#submit-name-button');
+    const name = lastName + ', ' + firstName;
+    input.value = name;
 };
