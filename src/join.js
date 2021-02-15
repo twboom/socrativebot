@@ -5,7 +5,7 @@ const join = function join(roomName, firstName, lastName, tickSpeed) {
     const joinRoomButton = document.querySelector('#studentLoginButton');
     async function fillRoomName() {
         const roomNameLetters = roomName.split('');
-        
+        roomInput.select()
         for (i = 0; i < roomNameLetters.length; i++) {
             roomInput.value += roomNameLetters[i]
             await timer(1000)
