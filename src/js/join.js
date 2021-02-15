@@ -8,7 +8,8 @@ join.room = function join(roomName) {
     const roomInput = document.querySelector('#studentRoomName');
     const joinRoomButton = document.querySelector('#studentLoginButton');
     roomInput.value = roomName;
-    roomInput.setAttribute('value', roomName)
+    roomInput.setAttribute('value', roomName);
+    joinRoomButton.click();
 };
 
 join.name = function(firstName, lastName) {
