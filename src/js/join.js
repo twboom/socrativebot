@@ -11,5 +11,5 @@ const join = function join(roomName, firstName, lastName, tickSpeed) {
             await timer(1000)
         }
     };
-    fillRoomName();
+    setTimeout(fillRoomName, 1000)
 };
